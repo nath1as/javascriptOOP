@@ -45,7 +45,7 @@ var people = {
     console.log(person.firstName + ' ' + person.lastName);
   },
   rollCall: function() {
-    people.collection.forEach(people.fullName);
+    this.collection.forEach(people.fullName);
   }
 }
 
