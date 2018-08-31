@@ -27,9 +27,23 @@ function fullName(person) {
   console.log(person.firstName + ' ' + person.lastName);
 }
 
+var people = [];
 
-fullName(char);
-fullName(char2);
-fullName(friend);
-fullName(mother);
-fullName(father);
+people.push(char);
+people.push(char2);
+people.push(friend);
+people.push(mother);
+people.push(father);
+
+function rollCall(collection) {
+  collection.forEach(fullName);
+}
+
+
+rollCall(people);
+
+// fullName(char);
+// fullName(char2);
+// fullName(friend);
+// fullName(mother);
+// fullName(father);
