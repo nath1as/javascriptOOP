@@ -46,6 +46,9 @@ var people = {
   },
   rollCall: function() {
     this.collection.forEach(people.fullName);
+  },
+  add: function(person) {
+    this.collection.push(person);
   }
 }
 
