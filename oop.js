@@ -27,20 +27,29 @@ function fullName(person) {
   console.log(person.firstName + ' ' + person.lastName);
 }
 
-var people = [];
+// var people = [];
 
-people.push(char);
-people.push(char2);
-people.push(friend);
-people.push(mother);
-people.push(father);
+// people.push(char);
+// people.push(char2);
+// people.push(friend);
+// people.push(mother);
+// people.push(father);
 
-function rollCall(collection) {
-  collection.forEach(fullName);
+// function rollCall(collection) {
+//   collection.forEach(fullName);
+// }
+
+var people = {
+  collection: [char, char2, friend, mother, father],
+  fullName: function(person) {
+    console.log(person.firstName + ' ' + person.lastName);
+  },
+  rollCall: function() {
+    people.collection.forEach(people.fullName);
+  }
 }
 
-
-rollCall(people);
+people.rollCall();
 
 // fullName(char);
 // fullName(char2);
