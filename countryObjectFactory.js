@@ -1,10 +1,15 @@
-function makeCountry(country, continent) {
+function makeCountry(name, continent, visited) {
+  if (visited === undefined) {
+    visited = false;
+  }
+
   return {
-    name: country,
+    name: name,
     continent: continent,
     getDescription: function() {
       return this.name + ' is located in ' + this.continent + '.';
-    }
+    },
+    visited: visited,
   };
 }
 
