@@ -7,9 +7,14 @@ function makeCountry(name, continent, visited) {
     name: name,
     continent: continent,
     getDescription: function() {
-      return this.name + ' is located in ' + this.continent + '.';
+      return this.name + ' is located in ' + this.continent + '. I ' +
+      (this.visited ? 'have' : "haven't") +
+      ' visited ' + this.name + '.';
     },
     visited: visited,
+    visitCountry: function() {
+      this.visited = true;
+    },
   };
 }
 
